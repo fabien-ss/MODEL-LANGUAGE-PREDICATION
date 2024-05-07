@@ -30,7 +30,7 @@ function randomLanguage(min: number, max: number): string {
     let strLanguage = language.toString()
     if(isCode(language)) strLanguage = "1;" + strLanguage;
     else strLanguage = "0;" + strLanguage
-    return strLanguage.replace(",", ";");
+    return strLanguage;
 }
 
 function generateMultipleLanguage(size: number, filePath: string): void{
@@ -43,4 +43,4 @@ function generateMultipleLanguage(size: number, filePath: string): void{
     fs.writeFileSync(filePath, corpus)
 }
 
-generateMultipleLanguage(10000, "./languages.csv")
+generateMultipleLanguage(20000, "./languages.csv")
