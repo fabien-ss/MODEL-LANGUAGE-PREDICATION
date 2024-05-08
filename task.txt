@@ -7,3 +7,5 @@ train model of machine learning
 model accurracy > 80%
 create test data
 build front app
+
+ameliorate current model
