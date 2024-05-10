@@ -76,7 +76,26 @@ function substractArray(divident: string[], divisor: string[]): string[] {
     return newArr;
 }
 
+export function handleApiRequest(code: string){
+        const regex = /^(0|1|,)*$/;
+        const isValid = regex.test(code);
+    if(isValid){
+        return {
+            status: 200,
+            message: isCode(code.split(",")),
+            data: code
+        }
+    }else{
+        return {
+            status: 400,
+            message: "not a valid entry",
+            data: code
+        }
+    }
+}
+
 export function isCode(code: string[]) {
+    
     if (code.length === 1 || checkLanguagesCodeLength(code)) return true
     let residus: string[][] = [];
     residus.push(code);
@@ -118,7 +137,7 @@ let c = ["101", "10", "111"]
 let d = ["01", "101", "1111", "11011"]
 let e = ["01", "101", "110"]
 
-let code = isCode("1000100,00000,101000,10,01100".split(","))
+let code = isCode("00,001,10,111111".split(","))
 console.log("code? ", code)
 /*
 if(!code){

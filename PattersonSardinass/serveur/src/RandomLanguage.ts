@@ -1,4 +1,4 @@
-import { isCode } from "./PattersonSardinass";
+import { isCode } from "./PattersonSardinass.ts";
 
 import * as fs from "fs";
 
@@ -23,7 +23,7 @@ function randomLanguage(min: number, max: number): string {
     let randomLength = Math.floor(Math.random() * max + min);
     let language: string[] = [];
     let i = 0
-    while ( i < randomLength){
+    while (i < randomLength){
         language.push(randomWord(1, 7))
         i ++;
     }
@@ -43,4 +43,4 @@ function generateMultipleLanguage(size: number, filePath: string): void{
     fs.writeFileSync(filePath, corpus)
 }
 
-generateMultipleLanguage(20000, "./languages.csv")
+generateMultipleLanguage(40000, "./languages.csv")
