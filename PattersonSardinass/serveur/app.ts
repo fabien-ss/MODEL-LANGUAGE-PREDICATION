@@ -24,7 +24,7 @@ app.get('/is_code/:code', async (req: Request, res: Response) => {
     "python": ml,
     "ps": ps
   } 
-  res.send(handleApiRequest(retour));
+  res.send((retour));
 })
 
 app.listen(3000, () => console.log('Example app is listening on port 3000.'));

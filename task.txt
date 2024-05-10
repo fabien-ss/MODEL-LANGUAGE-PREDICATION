@@ -4,7 +4,7 @@ transform the language into exploitable numerics
     length, max-word-length, min-word-length, number-1, number-0, average-length, frenquency-apparition
     tf-idf?
 train model of machine learning
-model accurracy > 80%
+model accurracy > 90%
 create test data
 build front app
 

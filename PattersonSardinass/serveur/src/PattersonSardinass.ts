@@ -77,8 +77,8 @@ function substractArray(divident: string[], divisor: string[]): string[] {
 }
 
 export function handleApiRequest(code: string){
-        const regex = /^(0|1|,)*$/;
-        const isValid = regex.test(code);
+    const regex = /^(0|1|,)*$/;
+    const isValid = regex.test(code);
     if(isValid){
         return {
             status: 200,
