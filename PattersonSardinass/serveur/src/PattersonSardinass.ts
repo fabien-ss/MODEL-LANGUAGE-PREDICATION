@@ -113,7 +113,6 @@ export function isCode(code: string[]) {
             union.every(element => subArray.includes(element)));
         if (isInArray) return true;
         residus.push(union)
-        //console.log(i)
         i++;
     }
 }
